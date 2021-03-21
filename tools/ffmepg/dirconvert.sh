@@ -9,7 +9,7 @@ bitrate="128k"                                    # output bitrate
 read -e -p "Working directory: " -i "./" dir      # working directory (where to find the files)
 
 cd $dir
-mkdir ./out
+mkdir -p ./out
 for file in *\.$inext                             # loop through all the files with the given input filetype/extension
   do 
     output=$(echo $file | sed "s/.wav//g")        # remove the input file extension for output filename
