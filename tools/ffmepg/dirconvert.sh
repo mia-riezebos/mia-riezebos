@@ -13,7 +13,7 @@ mkdir -p ./out
 for file in *\.$inext                             # loop through all the files with the given input filetype/extension
   do 
     output=$(echo $file | sed "s/.wav//g")        # remove the input file extension for output filename
-    ffmpeg -loglevel error -y -i $file           `# ffmpeg with $file as input`\
+    ffmpeg -loglevel info -y -i $file            `# ffmpeg with $file as input`\
       -c:a $codec -b:a $bitrate -vn              `# set codec and bitrate, ignore video`\
       ./out/$output\.$outext                     `# set output`
   done
