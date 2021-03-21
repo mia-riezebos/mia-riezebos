@@ -1,6 +1,6 @@
 #! /bin/bash
 #
-# Quickly convert all the files of a certain filetype in a directory to another filetype using ffmpeg (useful for say, converting wav to ogg for sharing).
+# Quickly convert all the files of a certain filetype in a directory to another filetype using ffmpeg (useful for say, converting wav to ogg for minecraft resource packs).
 
 inext="wav"                                       # input filetype/extension
 outext="ogg"                                      # output filetype/extension   !!(also change codec)!!
