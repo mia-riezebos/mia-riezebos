@@ -12,8 +12,8 @@ cd $DIR
 mkdir -p ./out
 for FILE in *\.$INEXT                             # loop through all the files with the given input filetype/extension
   do 
-    OUTPUT=$(echo $FILE | sed "s/.$INEXT\//g")        # remove the input file extension for output filename
-    ffmpeg -loglevel info -y -i $FILES            `# ffmpeg with $file as input`\
+    OUTPUT=$(echo $FILE | sed "s/.$INEXT\//g")    # remove the input file extension for output filename
+    ffmpeg -loglevel info -y -i $FILES           `# ffmpeg with $file as input`\
       -c:a $CODEC -b:a $BITRATE -vn              `# set codec and bitrate, ignore video`\
       ./out/$OUTPUT\.$OUTEXT                     `# set output`
   done
